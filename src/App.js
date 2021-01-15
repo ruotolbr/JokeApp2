@@ -1,57 +1,55 @@
-import React, { useState } from 'react'
-import './index'
+import React, { useState, useEffect } from "react";
+import Header from "./Components/Header";
+import Main from "./Components/Main";
+import Footer from "./Components/Footer";
+import SearchForm from './Components/SearchForm'
 import JokeData from './Components/JokeData'
-// import axios from "axios"; 
-import './App.css';
 
 
-
+// import axios from "axios";
+import "./App.css";
 
 function App() {
+  const [joke, setJokes] = useState([]);
 
-  // const [joke, setJoke] = useState(null); 
+ const onClick = (e) => {
+   e.preventDefault();
+   console.log("click")
+    setJokes(joke);
+ }
+ 
+
+
+useEffect(() => {
+  if(!setJokes(joke)){
+    console.log("no jokes here");
+    return <h2>No joke here. Find a new joke.</h2>
+    
+  }else{
+    return setJokes();
+  }
+  setJokes();
+}, [])
   
-  // const darkJokesApi = "https://v2.jokeapi.dev/joke/Miscellaneous,Dark,Pun?blacklistFlags=nsfw,religious,political,racist,sexist,explicit";
-  // const getData = async () => {
-  //   const resp = await axios.get(darkJokesApi);
-  //   setJoke(resp.data)
-  //   console.log(resp.data)
-
-  // };
-
   return (
     <div className="App">
-      <header className="App-header">
-        </header>
-        <h1>Random Joke App. Haha.</h1>
+      <div className="App-header">
+        <Header />
+        <h1>Search for a Joke</h1>
         
+      </div>
+
+      <div className="app-main">
         <h1>Today's Joke: </h1>
-        <div>
-        <button className="get-joke-btn" >Generate A Joke</button>
-        </div>
-        <div className="jokes">
-          {/* {joke &&
-          joke.map((jokes, index) => {
-            const jokeSetup = jokes.setup */}
+        <Main />
+        <SearchForm />
+        <JokeData />
+        <button onClick={onClick} className="get-joke-btn">Generate A Joke</button>
+      </div>
 
-          {/* //   return (
-          //     <div className="jokes" key={index}>
-          //      <h2>{jokes.setup}</h2>
-
-          //      <div className="delivery">
-          //        <h1>{jokeSetup}</h1>
-          //        <h2>{jokes.delivery}</h2>
-          //       </div>
-          //       </div>
-
-          //   );
-
-          // })
-        } */}
-        
-          <JokeData />
-        
-        </div> 
+      <div className="app-footer">
+        <Footer />
+      </div>
     </div>
   );
 }

@@ -1,15 +1,47 @@
 .App {
   text-align: center;
   justify-content: center;
+  background-color: black;
 } 
-.jokes{
+.joke-container{
   display: flex;
   flex-wrap: wrap;
+  padding: 10px;
+  justify-content: center;
+  flex-direction: column;
 }
-.delivery {
+.setup{
   width: 45%;
   position: relative;
   border-radius: 5px; 
-  background-color: blue;
+  background-color: rgb(255, 253, 115);
   color: black;
+  margin: 0 auto;
+}
+.delivery {
+  height: 80px;
+  width: 45%;
+  position: relative;
+  border-radius: 5px; 
+  background-color: rgb(214, 56, 28);
+  color: black;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+.nav-link{
+
+  color: Red;
+  
+}
+.nav-container{
+  background-color: rgb(255, 253, 145);
+  height: 13vh;
+}
+.navbar{
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-evenly;
+  padding-top: 40px;
+  font-size: 40px;
+  font-family: 'Fredoka One', cursive;
 }
