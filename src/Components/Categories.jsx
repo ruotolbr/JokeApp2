@@ -2,11 +2,17 @@ import React from 'react';
 import SearchForm from './SearchForm'
 
 function Categories(props) {
+
+
+    const onClick =() => {
+        
+        console.log("categories button clicked!")
+    }
     return (
         <div>
             
-            <h2>Categories</h2>
-            <SearchForm />
+            <div className="categories-btn" onClick={onClick}>Categories</div>
+            
         </div>
     );
 }

@@ -1,42 +1,52 @@
 import React, { useState, useEffect } from "react";
+import axios from 'axios'
 
 
-
- function JokeData(props) {
+ function JokeData({ props, searchString, lastSearch }) {
     const [jokes, setJokes] = useState([]); 
-    
-    fetch("https://jokes.p.rapidapi.com/jod?category=%3Crequired%3E", {
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-host": "jokes.p.rapidapi.com",
-		"x-rapidapi-key": "d9682ccc8cmshe85f76f0d389e1bp164bcajsn27ca1493b51c"
-	}
-})
-.then(response => {
-	console.log(response);
-})
-.catch(err => {
-	console.log(err);
-});
+ useEffect(() => {
+    axios.get('https://icanhazdadjoke.com/search?term=cats')
+        .then(res => {
+                console.log(res)
+            })
+           .catch(err => { 
+               console.log(err)
+        })
+    fetch(`https://icanhazdadjoke.com/search?term=${searchString}`)
+    .then(response => {
+        setJokes(response)
 
+        console.log(response);
+    })
+    .catch(err => { 
+        console.log(err);
+    });
+    
+ }, []);   
+  
     
     useEffect(() => {
         fetch("https://v2.jokeapi.dev/joke/Miscellaneous,Dark,Pun?blacklistFlags=nsfw,religious,political,racist,sexist,explicit")
         .then((res) => res.json())
         
         .then((res) => { 
-            // console.log("res", res)
+            console.log("res", res)
             setJokes(res);
             
         })
         .catch(console.error)
     }, []);
-    console.log(jokes)
+    
 
     return (
         <section className="container">
                 
                 <div className="joke-container">
+                    <div className="search-res">
+                        {
+                            jokes.map(joke => <div key={joke.searchString}></div>)
+                        }
+                    </div>
                     <div className="setup">
                         <h2>{jokes.setup}</h2>
                     </div> 

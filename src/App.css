@@ -45,3 +45,10 @@
   font-size: 40px;
   font-family: 'Fredoka One', cursive;
 }
+.search-bar{
+  color: #c91212;
+  height: 30px;
+  width: 20vw;
+  font-weight: bold; 
+  margin-bottom: 10px;
+}
