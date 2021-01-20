@@ -5,8 +5,8 @@ function Nav(props) {
     return (
         <div className="nav-container">
           <div className="navbar">
-         <Link to="/Home" className="nav-link">Home</Link>
-         <Link to="/Categories" className="nav-link">Categories</Link>
+         <Link to="/" className="nav-link">Home</Link>
+         <Link to="/Links" className="nav-link">Links</Link>
         </div>   
     </div>
     );

@@ -1,7 +1,9 @@
 .App {
   text-align: center;
   justify-content: center;
-  background-color: black;
+  height: 100vh;
+  background-image: url('./backgroundpic.jpg');
+  background-size: 100% 100%;
 } 
 .joke-container{
   display: flex;
@@ -9,24 +11,21 @@
   padding: 10px;
   justify-content: center;
   flex-direction: column;
+  height: 75%vh;
+}
+.jokedata-container{
+  height: 85%vh;
+  width: 100vw;
 }
 .setup{
-  width: 45%;
+
+  width:85%;
   position: relative;
   border-radius: 5px; 
   background-color: rgb(255, 253, 115);
   color: black;
   margin: 0 auto;
-}
-.delivery {
-  height: 80px;
-  width: 45%;
-  position: relative;
-  border-radius: 5px; 
-  background-color: rgb(214, 56, 28);
-  color: black;
-  margin: 0 auto;
-  padding-bottom: 10px;
+  padding: 10px;
 }
 .nav-link{
 
@@ -45,10 +44,22 @@
   font-size: 40px;
   font-family: 'Fredoka One', cursive;
 }
-.search-bar{
-  color: #c91212;
-  height: 30px;
-  width: 20vw;
-  font-weight: bold; 
-  margin-bottom: 10px;
+.get-joke-btn{
+  height: 25px;
+  width: 175px;
+  cursor: pointer;
+
+}
+.like-btn{
+  height:25px;
+  width: 175px;
+  cursor: pointer;
+}
+.btns{
+  display: flex;
+  flex: grid; 
+  justify-content: space-evenly;
+  cursor: pointer;
+  
+
 }

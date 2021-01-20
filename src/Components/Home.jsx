@@ -1,11 +1,28 @@
-import React from 'react';
+import React, { Component, useState } from 'react';
+import JokeData from './JokeData.jsx';
 
-function ComponentA(props) {
+
+
+class Home extends Component {
+    render(){
+        return <div></div>
+    }
+}
+function RandomJokes() {
+    const [joke, setJokes] = useState([]);
+
+    const onClick = (e) => {
+        e.preventDefault();
+        console.log("click")
+         setJokes(joke);
+      }
     return (
-        <div>
-            <h2>Home</h2>
+        <div className="home">
+            <h1><Home /></h1>
+            <h2><JokeData /></h2>
         </div>
     );
 }
 
-export default ComponentA;
+
+export default RandomJokes;

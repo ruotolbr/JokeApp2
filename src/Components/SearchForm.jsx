@@ -3,12 +3,16 @@ import React, { useState  } from 'react';
 // import SearchResults from './SearchResults'
 
 
-function SearchForm({ handleSubmit, handleChange, searchString, lastSearch }) {
+
+function SearchForm({ handleSubmit, searchString }) {
     
     const searchClick = () => {
     }
     const [search, setSearch ] = useState('');
-
+    const handleChange = event => {
+        setSearch(event.target.value);
+    };
+    
 
     return (
         <div className= "searchform-container ">
@@ -20,7 +24,7 @@ function SearchForm({ handleSubmit, handleChange, searchString, lastSearch }) {
                 name="searchString"
                 required
                 onChange={handleChange}
-                value={searchString}
+                value={search}
                 >
                 
                 </input>
