@@ -107,3 +107,7 @@ a{
   color: rgb(253, 43, 6);
   font-family: 'Yanone Kaffeesatz';
 }
+
+.link{
+  font-size: 35px;
+}
