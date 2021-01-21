@@ -54,16 +54,15 @@ import React, { useState, useEffect } from "react";
         <section className="jokedata-container">
                 
                 <div className="joke-container">
-                    <div className="search-res">
-                    </div>
+                    
                     <div className="setup">
-                        <h2>{jokes.setup}</h2>
-                        <h2>{jokes.delivery}</h2>
                         
-                    </div> 
+                        <h2 id="joke-text">{jokes.setup}</h2>
+                        <h2 className="joke-text">{jokes.delivery}</h2>
+                        
+                   </div>
                     <div className="btns">
                     <button onClick={()=> setFetching(!fetching)} className="get-joke-btn">Generate A Joke</button>   
-                    <button onClick={onClick} className="like-btn">Like</button> 
                     </div>
                 </div>
             

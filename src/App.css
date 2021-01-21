@@ -18,23 +18,33 @@
   width: 100vw;
 }
 .setup{
-
+  
   width:85%;
   position: relative;
   border-radius: 5px; 
-  background-color: rgb(255, 253, 115);
-  color: black;
+  /* background-color: rgb(255, 253, 115) opacity .5; */
+  background-color:rgba(255,255,255, .5);
+  color:black;
   margin: 0 auto;
   padding: 10px;
 }
 .nav-link{
-
-  color: Red;
+  color:#000 opacity 0.4;
+  font-family: 'Fraunces', serif;
+  text-decoration: none;
   
 }
+.site-title, h1, p{
+  display: flex; 
+  flex: grid; 
+  flex-direction: column;
+  
+
+}
 .nav-container{
-  background-color: rgb(255, 253, 145);
+  background-color: rgba(0, 0, 0, 0.911);
   height: 13vh;
+
 }
 .navbar{
   display: flex;
@@ -42,24 +52,42 @@
   justify-content: space-evenly;
   padding-top: 40px;
   font-size: 40px;
-  font-family: 'Fredoka One', cursive;
-}
-.get-joke-btn{
-  height: 25px;
-  width: 175px;
-  cursor: pointer;
-
-}
-.like-btn{
-  height:25px;
-  width: 175px;
-  cursor: pointer;
-}
-.btns{
-  display: flex;
-  flex: grid; 
-  justify-content: space-evenly;
-  cursor: pointer;
   
 
+}
+.get-joke-btn{
+  height: 50px;
+  width: 250px;
+  cursor: pointer;
+  border-radius: 20px;
+  margin-top: 45px;
+
+}
+ul{
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  background-color:rgba(255,255,255, .5);
+}
+a{
+  color: blue;
+  font-size: 45px; 
+  text-shadow: none;
+}
+.jokeslinksheader{
+  color: aliceblue;
+}
+.jokeslinks-contain, h1{
+  color: red;
+  font-size: 45px;
+  padding-top: 10px;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  margin-top: 20px;
+  font-family: 'Yanone Kaffeesatz';
+}
+.jokeslinks-contain, p{
+  color: rgb(253, 43, 6);
+  font-family: 'Yanone Kaffeesatz';
 }

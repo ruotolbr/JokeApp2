@@ -94,10 +94,9 @@ function getJokes(searchString){
         
          
       </div>
-
+      
       <div className="app-main">
-        
-        <JokeData searchString={searchString}/> 
+        <Main/>
       </div>
          
       <div className="app-footer">
