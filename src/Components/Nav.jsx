@@ -7,8 +7,11 @@ function Nav(props) {
           <div className="navbar">
          <Link to="/" className="nav-link">Home</Link>
          <div className="site-title">
-          <h1>Jokes101</h1><br></br>  
-          <p>Random Joke Generator</p> 
+          <ul className="sitename">
+              <li className="site">Jokes101</li>
+              <li>A random joke generator</li>
+          </ul>
+          
          </div>
          
          <Link to="/Links" className="nav-link">Links</Link>
