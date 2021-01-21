@@ -34,16 +34,18 @@
   color:#000 opacity 0.4;
   font-family: 'Fraunces', serif;
   text-decoration: none;
+  margin-top: 25px;
   
 }
 .sitename{
   background-color: rgb(255,255,255, 0);
   font-size: 25px;
-  padding-top: 5px;
+  padding-top: -5px;
   margin-left: -25px;
 }
 .site{
-  font-size: 35px;
+  font-family:'Rock Salt', cursive;
+  font-size: 45px;
   color: rgb(46, 228, 228);
   font-weight: bold;
 
@@ -51,7 +53,7 @@
 .site-title{
   display: block;
   color: white;
-  margin-top: -20px;
+  margin-top: -25px;
 }
 .nav-container{
   background-color: rgba(0, 0, 0, 0.911);
