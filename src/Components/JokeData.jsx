@@ -5,24 +5,6 @@ import React, { useState, useEffect } from "react";
  function JokeData({ searchString, lastSearch, url }) {
      console.log(searchString)
     const [jokes, setJokes] = useState([]); 
- useEffect(() => {
-    const PROXY_URL = 'https://cors-anywhere.herokuapp.com/'
-    const url = `https://icanhazdadjoke.com/search?term=${searchString}&page=1`
-    fetch(url+PROXY_URL, 
-        {
-        headers: {"Access-Control-Origin": "*"
-        }
-    }
-)
-        .then(res => res.json()) 
-        .then(json => console.log(json))
-      
-           .catch(err => { 
-               console.log(err)
-        },[])
-        console.log(jokes)
-
- }, []);   
 
     const [fetching, setFetching] = useState(false)
     const [joke, setJoke] = useState('')
@@ -44,12 +26,7 @@ import React, { useState, useEffect } from "react";
         console.log("click")
          setJokes(joke);
       }
-    const [like, setLike] = useState(false)
-
-   
     
-    
-
     return (
         <section className="jokedata-container">
                 
